@@ -42,6 +42,7 @@ void _SYS_Error ( const char *file, int line, const char *fmt, ... )
 	*ptr2 = '\0';
 
 	Log ( "%s", text2 );
+	fprintf(stderr, "%s", text); // serious errors should be shown in the terminal, too
 	//DaveCleanup ();			// main application cleanup
 	//exit ( 0 );
 }
